@@ -1,11 +1,13 @@
 {
-  "name": "CompName",
+  "name": "ComponentBoilerplate",
   "version": "0.1.0",
-  "description": "Description",
-  "repository": {},
+  "description": "Boilerplate for create Javascript Components ",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PauloSanches/component-boilerplate.git"
+  },
   "author": "Paulo Sanches",
-  "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/PauloSanches/component-boilerplate",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-clean": "^0.3.1",
@@ -21,10 +23,7 @@
     "gulp-uglify": "^0.3.1",
     "gulp-util": "^3.0.0",
     "jshint-stylish": "^0.4.0",
-    "lazypipe": "^0.2.1",
-    "merge-stream": "^0.1.5",
     "require-dir": "^0.1.0",
-    "run-sequence": "^0.3.6",
-    "yargs": "^1.3.1"
+    "run-sequence": "^0.3.6"
   }
 }

@@ -2,7 +2,7 @@
 
 module.exports = {
   dist: './build/',
-  output: '{{COMPNAME}}.js',
-  outputMin: '{{COMPNAME}}.min.js',
-  scripts: []
+  output: 'index.js',
+  outputMin: 'index.min.js',
+  scripts: ['src/index.js']
 };

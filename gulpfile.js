@@ -7,6 +7,8 @@ var gulp = require('gulp'),
   config = require(path.resolve(process.cwd(), 'config.js')),
   pkg = require(path.resolve(process.cwd(), 'package.json'));
 
+gulp.task('init',['clean']);
+
 gulp.task('default', function(){
   gulp.watch(config.scripts, function(){
     runSequence('lint','concat');
@@ -14,8 +16,6 @@ gulp.task('default', function(){
 });
 
 gulp.task('travis', ['build']);
-
-gulp.task('init',['clean','replacLicense', 'replaceConfig']);
 
 gulp.task('build', function() {
   runSequence('lint','concat','rename','minify');
@@ -49,23 +49,8 @@ gulp.task('rename', function() {
     .pipe(gulp.dest(''));
 });
 
-gulp.task('replaceLicense', function() {
-  return gulp.src('LICENSE.md')
-    .pipe(plugins.plumber())
-    .pipe(plugins.replace('{{YEAR}}',new Date().getFullYear()))
-    .pipe(plugins.replace('{{AUTHOR}}', pkg.author))
-    .pipe(gulp.dest(''));
-});
-
-gulp.task('replaceConfig', function() {
-  return gulp.src('config.js')
-    .pipe(plugins.plumber())
-    .pipe(plugins.replace('{{COMPNAME}}', pkg.name))
-    .pipe(gulp.dest(''));
-});
-
 gulp.task('clean', function() {
-  gulp.src('.git')
+  gulp.src(['.git','LICENSE', 'README.md'])
     .pipe(plugins.plumber())
     .pipe(plugins.clean());
 });
