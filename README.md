@@ -1,4 +1,4 @@
-# Component Boilerplate [![Build Status](https://secure.travis-ci.org/paulosanches/component-boilerpate.svg?branch=master)](https://travis-ci.org/paulosanches/component-boilerpate)
+# Component Boilerplate [![Build Status](https://travis-ci.org/PauloSanches/component-boilerplate.svg?branch=master)](https://travis-ci.org/PauloSanches/component-boilerplate)
 
 > Boilerplate for create Javascript Components.
 
