@@ -8,14 +8,13 @@ var gulp = require('gulp'),
   pkg = require(path.resolve(process.cwd(), 'package.json'));
 
 gulp.task('init',['clean']);
+gulp.task('travis', ['build']);
 
 gulp.task('default', function(){
   gulp.watch(config.scripts, function(){
     runSequence('lint','concat');
   });
 });
-
-gulp.task('travis', ['build']);
 
 gulp.task('build', function() {
   runSequence('lint','concat','rename','minify');
