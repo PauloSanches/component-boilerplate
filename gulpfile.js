@@ -21,7 +21,7 @@ gulp.task('build', function() {
 });
 
 gulp.task('lint', function() {
-  return gulp.src(config.scripts)
+  return gulp.src(config.dist + config.output)
     .pipe(plugins.plumber())
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'));
